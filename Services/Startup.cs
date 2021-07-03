@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
+using Services.Messages;
 
 namespace Services
 {
@@ -30,6 +31,8 @@ namespace Services
         .AddEntityFrameworkStores<ApplicationDbContext>()
         .AddDefaultTokenProviders();
 */
+
+            services.AddScoped<IMessageService, MessageService>();
 
             services.AddControllers()
                 .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
