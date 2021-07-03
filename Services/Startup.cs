@@ -4,17 +4,19 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System.Text.Json.Serialization;
-using Microsoft.EntityFrameworkCore;
 using Services.Messages;
+using System.Text.Json.Serialization;
 
 namespace Services
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IWebHostEnvironment _environment;
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _environment = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -31,7 +33,7 @@ namespace Services
         .AddEntityFrameworkStores<ApplicationDbContext>()
         .AddDefaultTokenProviders();
 */
-
+            
             services.AddScoped<IMessageService, MessageService>();
 
             services.AddControllers()

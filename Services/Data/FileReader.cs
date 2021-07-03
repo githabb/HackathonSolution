@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Hosting;
 
 namespace Services.Data
 {
     public class FileReader
     {
+        IWebHostEnvironment _environment;
+
+        public FileReader(IWebHostEnvironment env)
+        {
+            _environment = env;
+        }
     }
 }
