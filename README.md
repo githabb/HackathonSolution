@@ -4,12 +4,11 @@
 
 <Put here description of your tech decisions>
 В качестве базы данных использую SQL Server 2019. В данной базе используем функциональность графических баз данных для реализации зависимостей между сущностями.
+Реализовано в Visual Studio 2019, файл солюшина: HackathonSolution.sln
 
 ## Run
 
 <Put here steps to run your solution>
-
-_Example_
 
 ```bash
 # Go into the folder with solution and run:
