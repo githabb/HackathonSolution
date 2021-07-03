@@ -24,6 +24,7 @@ $ docker-compose up
 
 ## Test
 
+не реализовано
 <Put here steps to run your tests>
 
 _Example_
