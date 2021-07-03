@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Services.Messages;
 using Services.Models;
 using System.Collections.Generic;
@@ -44,7 +45,7 @@ namespace Services.Controllers
             }
 
             stopWatch.Stop();
-            _messageService.Enqueue(new InfoMessage() { elapsedTime = stopWatch.ElapsedMilliseconds, itemsCount = result.Count });
+            _messageService.Enqueue(new InfoMessage() { elapsedTime = stopWatch.ElapsedMilliseconds, itemsCount = result.Count, url = Request.GetEncodedPathAndQuery() });
 
             return result;
         }
