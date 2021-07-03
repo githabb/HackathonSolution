@@ -36,3 +36,18 @@ $ dotnet test HackathonSolution.sln
 ## Notes
 
 <Put here your notes if you have some>
+
+Реализовано:
+GET /users/{userId}/videos
+Easy Підтримується сортування за пріоритетом
+
+GET /users/{userId}/videos/{videoId}/paths
+Easy Підтримується сортування за пріоритетом
+
+Medium Черга RabbitMQ наповнюється коректними повідомленнями
+
+Easy Вибір бази даних для зберігання та вичитки даних - SQL Server 2019 с поддержкой графической базы
+https://docs.microsoft.com/ru-ru/sql/relational-databases/graphs/sql-graph-sample?view=sql-server-ver15
+
+Easy Дотримання код стайлу, структурованість, простота коду та чистота
+історії комітів
