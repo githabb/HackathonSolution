@@ -20,7 +20,7 @@ $ docker-compose up
 
 тут сервисы: https://localhost:8000/
 
-тут rabbitmq UI на порту 15672: http://localhost:15672/
+тут rabbitmq UI на порту 15672 (login guest:guest): http://localhost:15672/
 
 ## Test
 
